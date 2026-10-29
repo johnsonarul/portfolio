@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b1021" />
+      <stop offset="100%" stop-color="#16133a" />
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffd700" />
+      <stop offset="100%" stop-color="#ff8c00" />
+    </linearGradient>
+    <linearGradient id="violetGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8a2be2" />
+      <stop offset="100%" stop-color="#4facfe" />
+    </linearGradient>
+    <filter id="glow2" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="800" height="450" fill="url(#bgGrad2)" />
+
+  <circle cx="700" cy="100" r="140" fill="#ffd700" opacity="0.08" filter="url(#glow2)" />
+  <circle cx="100" cy="380" r="140" fill="#8a2be2" opacity="0.12" filter="url(#glow2)" />
+
+  <!-- Main Container -->
+  <rect x="50" y="35" width="700" height="380" rx="16" fill="rgba(18, 20, 45, 0.85)" stroke="rgba(255, 215, 0, 0.25)" stroke-width="1.5" />
+
+  <!-- Header -->
+  <rect x="50" y="35" width="700" height="45" rx="16" fill="rgba(255,255,255,0.03)" />
+  <circle cx="78" cy="57" r="6" fill="#ff5f56" />
+  <circle cx="98" cy="57" r="6" fill="#ffbd2e" />
+  <circle cx="118" cy="57" r="6" fill="#27c93f" />
+  <text x="145" y="62" fill="#fff" font-family="'Outfit', sans-serif" font-size="14" font-weight="600">Digital Permission Management System • Smart Techies 2025 Awardee</text>
+
+  <!-- Smart Techies Award Banner -->
+  <g transform="translate(480, 50)">
+    <rect x="0" y="0" width="250" height="32" rx="16" fill="url(#goldGrad)" opacity="0.15" stroke="url(#goldGrad)" stroke-width="1" />
+    <circle cx="20" cy="16" r="10" fill="#ffd700" />
+    <path d="M 17 16 L 19 18 L 24 13" fill="none" stroke="#000" stroke-width="2" />
+    <text x="36" y="21" fill="#ffd700" font-family="'Outfit', sans-serif" font-size="11" font-weight="700">CERTIFICATE OF APPRECIATION</text>
+  </g>
+
+  <!-- Workflow Stages (Multi-level approval) -->
+  <g transform="translate(80, 110)">
+    <!-- Stage 1 -->
+    <rect x="0" y="0" width="180" height="110" rx="12" fill="rgba(255,255,255,0.03)" stroke="rgba(0, 242, 254, 0.3)" />
+    <circle cx="35" cy="35" r="16" fill="rgba(0, 242, 254, 0.2)" />
+    <text x="31" y="40" fill="#00f2fe" font-size="14" font-weight="700">1</text>
+    <text x="60" y="38" fill="#fff" font-family="'Outfit', sans-serif" font-size="13" font-weight="600">User Request</text>
+    <text x="20" y="70" fill="#8892b0" font-family="'Outfit', sans-serif" font-size="11">Centralized digital form</text>
+    <text x="20" y="88" fill="#27c93f" font-family="'Outfit', sans-serif" font-size="11" font-weight="600">● Submitted &amp; Logged</text>
+
+    <!-- Arrow 1 -->
+    <path d="M 195 55 L 225 55" stroke="#00f2fe" stroke-width="2" stroke-dasharray="3" />
+
+    <!-- Stage 2 -->
+    <rect x="235" y="0" width="180" height="110" rx="12" fill="rgba(255,255,255,0.03)" stroke="rgba(255, 215, 0, 0.35)" />
+    <circle cx="270" cy="35" r="16" fill="rgba(255, 215, 0, 0.2)" />
+    <text x="266" y="40" fill="#ffd700" font-size="14" font-weight="700">2</text>
+    <text x="295" y="38" fill="#fff" font-family="'Outfit', sans-serif" font-size="13" font-weight="600">Department Audit</text>
+    <text x="255" y="70" fill="#8892b0" font-family="'Outfit', sans-serif" font-size="11">Automated validation</text>
+    <text x="255" y="88" fill="#ffd700" font-family="'Outfit', sans-serif" font-size="11" font-weight="600">● Multi-tier Verification</text>
+
+    <!-- Arrow 2 -->
+    <path d="M 430 55 L 460 55" stroke="#ffd700" stroke-width="2" stroke-dasharray="3" />
+
+    <!-- Stage 3 -->
+    <rect x="470" y="0" width="180" height="110" rx="12" fill="rgba(255,255,255,0.03)" stroke="rgba(79, 172, 254, 0.3)" />
+    <circle cx="505" cy="35" r="16" fill="rgba(79, 172, 254, 0.2)" />
+    <text x="501" y="40" fill="#4facfe" font-size="14" font-weight="700">3</text>
+    <text x="530" y="38" fill="#fff" font-family="'Outfit', sans-serif" font-size="13" font-weight="600">Final Clearance</text>
+    <text x="490" y="70" fill="#8892b0" font-family="'Outfit', sans-serif" font-size="11">QR authorization badge</text>
+    <text x="490" y="88" fill="#00f2fe" font-family="'Outfit', sans-serif" font-size="11" font-weight="600">● Real-time Approval</text>
+  </g>
+
+  <!-- Bottom Details & Metrics -->
+  <g transform="translate(80, 245)">
+    <rect x="0" y="0" width="400" height="145" rx="12" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.08)" />
+    <text x="20" y="30" fill="#fff" font-family="'Outfit', sans-serif" font-size="14" font-weight="600">Workflow Efficiency Matrix</text>
+    
+    <text x="20" y="65" fill="#8892b0" font-size="12">Approval Turnaround Time</text>
+    <rect x="20" y="75" width="360" height="8" rx="4" fill="rgba(255,255,255,0.08)" />
+    <rect x="20" y="75" width="310" height="8" rx="4" fill="url(#violetGrad)" />
+    <text x="340" y="65" fill="#4facfe" font-size="12" font-weight="600">-85%</text>
+
+    <text x="20" y="110" fill="#8892b0" font-size="12">Security Audit &amp; Traceability</text>
+    <rect x="20" y="120" width="360" height="8" rx="4" fill="rgba(255,255,255,0.08)" />
+    <rect x="20" y="120" width="350" height="8" rx="4" fill="url(#cyanGrad)" />
+    <text x="345" y="110" fill="#00f2fe" font-size="12" font-weight="600">100%</text>
+  </g>
+
+  <!-- Security & Innovation Badge -->
+  <g transform="translate(500, 245)">
+    <rect x="0" y="0" width="230" height="145" rx="12" fill="rgba(255,255,255,0.02)" stroke="rgba(255,215,0,0.2)" />
+    <circle cx="115" cy="50" r="28" fill="rgba(255,215,0,0.12)" stroke="#ffd700" stroke-width="1.5" />
+    <text x="105" y="58" fill="#ffd700" font-size="24">★</text>
+    <text x="40" y="98" fill="#fff" font-family="'Outfit', sans-serif" font-size="13" font-weight="600">Smart Techies 2025</text>
+    <text x="25" y="118" fill="#ffd700" font-family="'Outfit', sans-serif" font-size="11" font-weight="600">Innovation &amp; Creativity Award</text>
+  </g>
+</svg>

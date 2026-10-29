@@ -4,66 +4,162 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Johnson Arul K | Front-End Developer Portfolio</title>
+    <title>Johnson Arul K | Data Analyst &amp; BI Specialist Portfolio</title>
     <meta name="description"
-        content="Portfolio of Johnson Arul K, a passionate Front-End Developer specializing in React.js, PHP, and modern web design.">
+        content="Portfolio of Johnson Arul K, MCA Graduate &amp; Aspiring Data Analyst specializing in SQL, Power BI, Python, Excel, and Data Visualization.">
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <!-- AOS Animation Library -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <!-- 3D Three.js Interactive Background Canvas -->
+    <canvas id="bg-canvas"></canvas>
+
     <!-- Navigation -->
     <nav class="navbar">
-        <div class="container">
-            <a href="#" class="logo">JOHNSON<span>.</span></a>
+        <div class="container nav-container">
+            <a href="#home" class="logo">
+                <span class="logo-name">JOHNSON</span><span class="logo-dot">.</span>
+                <span class="logo-badge">DATA ANALYST</span>
+            </a>
             <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
+                <li><a href="#home" class="active">Home</a></li>
                 <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
                 <li><a href="#skills">Skills</a></li>
-                <li><a href="#certifications">Certifications</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#certifications">Certifications</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <div class="menu-btn"><i class="fas fa-bars"></i></div>
+            <div class="nav-actions">
+                <a href="#contact" class="btn btn-nav">Hire Me</a>
+                <div class="menu-btn" id="mobile-toggle" aria-label="Toggle Navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
         </div>
     </nav>
 
+    <!-- Mobile Drawer Navigation -->
+    <div class="mobile-nav" id="mobile-nav">
+        <div class="mobile-nav-header">
+            <span class="logo-name">JOHNSON<span>.</span></span>
+            <div class="close-btn" id="close-mobile"><i class="fas fa-times"></i></div>
+        </div>
+        <ul class="mobile-nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="mobile-contact-pill">
+            <p><i class="fas fa-phone-alt"></i> +91 9791649247</p>
+            <p><i class="fas fa-envelope"></i> john9791649247@gmail.com</p>
+        </div>
+    </div>
+
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="container">
+        <div class="container hero-grid">
             <div class="hero-content" data-aos="fade-right">
+                <div class="badge-status">
+                    <span class="pulse-dot"></span>
+                    <span>Available for Data Analyst Roles</span>
+                </div>
                 <h3 class="greeting">Hello, I'm</h3>
                 <h1 class="name">Johnson Arul K</h1>
-                <h2 class="role">Front-End Developer & <span class="typing"></span></h2>
+                <h2 class="role">Data Analyst &amp; <span class="typing"></span></h2>
                 <p class="description">
-                    Designing and building scalable, responsive web applications with a focus on performance
-                    optimization and clean, maintainable code.
+                    MCA graduate and aspiring Data Analyst with hands-on exposure to SQL, Power BI, Python, Excel, data visualization and dashboard development. Strong in analytical thinking, problem solving and turning data into clear, actionable business insights.
                 </p>
-                <div class="hero-btns">
-                    <a href="#projects" class="btn btn-primary">View My Work</a>
-                    <a href="#contact" class="btn btn-secondary">Hire Me</a>
+
+                <!-- Quick Location & Contact Tags -->
+                <div class="contact-pills">
+                    <span class="pill"><i class="fas fa-map-marker-alt"></i> Dindigul, Tamil Nadu</span>
+                    <a href="tel:+919791649247" class="pill"><i class="fas fa-phone-alt"></i> 9791649247</a>
+                    <a href="mailto:john9791649247@gmail.com" class="pill"><i class="fas fa-envelope"></i> john9791649247@gmail.com</a>
                 </div>
+
+                <div class="hero-btns">
+                    <a href="#projects" class="btn btn-primary"><i class="fas fa-chart-line"></i> View Projects</a>
+                    <a href="#contact" class="btn btn-secondary"><i class="fas fa-paper-plane"></i> Contact Me</a>
+                </div>
+
                 <div class="social-links">
-                    <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="mailto:john9791649247@gmail.com"><i class="fas fa-envelope"></i></a>
+                    <a href="https://linkedin.com/in/johnson-arul" target="_blank" rel="noopener noreferrer" title="LinkedIn Profile">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com" target="_blank" rel="noopener noreferrer" title="GitHub Profile">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="mailto:john9791649247@gmail.com" title="Direct Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="tel:9791649247" title="Phone Call">
+                        <i class="fas fa-phone-alt"></i>
+                    </a>
                 </div>
             </div>
-            <div class="hero-image" data-aos="zoom-in">
-                <div class="image-wrapper">
-                    <img src="profile.jpg" alt="Johnson Arul K">
-                    <div class="blob"></div>
+
+            <!-- 3D Hero Profile Visual -->
+            <div class="hero-visual" data-aos="zoom-in" data-aos-delay="200">
+                <div class="profile-3d-card" data-tilt data-tilt-max="12" data-tilt-speed="400" data-tilt-perspective="1000">
+                    <div class="card-glow-layer"></div>
+                    <div class="profile-frame">
+                        <img src="profile.jpg" alt="Johnson Arul K - Data Analyst" class="profile-img">
+                        <div class="photo-overlay-glass"></div>
+                    </div>
+
+                    <!-- 3D Parallax Floating Badges -->
+                    <div class="floating-badge badge-top-left" data-tilt-transform="translateZ(45px)">
+                        <div class="badge-icon"><i class="fas fa-chart-pie"></i></div>
+                        <div class="badge-text">
+                            <strong>Power BI &amp; SQL</strong>
+                            <span>Data Modeling</span>
+                        </div>
+                    </div>
+
+                    <div class="floating-badge badge-top-right" data-tilt-transform="translateZ(55px)">
+                        <div class="badge-icon gold"><i class="fas fa-graduation-cap"></i></div>
+                        <div class="badge-text">
+                            <strong>MCA • 8.13 CGPA</strong>
+                            <span>Arul Anandar College</span>
+                        </div>
+                    </div>
+
+                    <div class="floating-badge badge-bottom-right" data-tilt-transform="translateZ(50px)">
+                        <div class="badge-icon python"><i class="fab fa-python"></i></div>
+                        <div class="badge-text">
+                            <strong>Python &amp; Excel</strong>
+                            <span>Analytics &amp; Dashboards</span>
+                        </div>
+                    </div>
+
+                    <div class="floating-badge badge-bottom-left" data-tilt-transform="translateZ(40px)">
+                        <div class="badge-icon solar"><i class="fas fa-solar-panel"></i></div>
+                        <div class="badge-text">
+                            <strong>Solar O&amp;M</strong>
+                            <span>LONGi Solar Experience</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="scroll-down">
-            <span>Scroll Down</span>
+            <span>Explore Portfolio</span>
             <i class="fas fa-chevron-down"></i>
         </div>
     </section>
@@ -71,98 +167,385 @@
     <!-- About Section -->
     <section id="about" class="about section">
         <div class="container">
-            <h2 class="section-title" data-aos="fade-up">About Me</h2>
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">PROFILE OVERVIEW</span>
+                <h2 class="section-title">About Me</h2>
+                <p class="section-sub">Transforming raw data into strategic solutions with analytical rigor</p>
+            </div>
+
             <div class="about-grid">
                 <div class="about-text" data-aos="fade-right">
-                    <p>
-                        I am a dedicated <strong>MCA Student</strong> at Arul Anandar College, Kamaraj University, with
-                        a strong foundation in chemistry and a passion for technology. Currently pursuing my Master's, I
-                        maintain an 80% academic record.
+                    <p class="lead-text">
+                        I am an <strong>MCA Graduate</strong> and aspiring <strong>Data Analyst</strong> with hands-on exposure to SQL, Power BI, Python, Excel, data visualization and dashboard development.
                     </p>
                     <p>
-                        My journey from Chemistry to Web Development has equipped me with unique analytical
-                        problem-solving skills and a meticulous approach to coding. I specialize in building modern,
-                        user-centric interfaces using React.js and PHP.
+                        With academic roots in <strong>B.Sc. Chemistry</strong> and advanced computer applications in <strong>MCA</strong>, I bring a unique dual lens: scientific precision combined with modern computational data engineering. I enjoy uncovering underlying trends, designing automated dashboards, and presenting actionable insights for high-impact decision making.
                     </p>
-                    <div class="education-timeline">
-                        <div class="timeline-item">
-                            <span class="year">2024 - Present</span>
-                            <h4>MCA</h4>
-                            <p>Arul Anandar College (Autonomous), Madurai</p>
-                        </div>
-                        <div class="timeline-item">
-                            <span class="year">2020 - 2023</span>
-                            <h4>B.Sc. Chemistry</h4>
-                            <p>St. Joseph’s College (Autonomous), Trichy</p>
+                    <p>
+                        My professional journey spans practical experience in <strong>Solar O&amp;M monitoring at LONGi Solar</strong>, an intensive <strong>Data Analytics Internship at NoviTech R&amp;D</strong>, and web application development at <strong>Wiltech Solutions</strong>.
+                    </p>
+
+                    <!-- Education Sub-Section -->
+                    <div class="education-block">
+                        <h3 class="subsection-title"><i class="fas fa-user-graduate"></i> Academic Journey</h3>
+                        <div class="education-timeline">
+                            <div class="edu-card" data-tilt data-tilt-max="8">
+                                <div class="edu-badge">2024 – 2026</div>
+                                <div class="edu-body">
+                                    <h4>Master of Computer Applications (MCA)</h4>
+                                    <p class="institution">Arul Anandar College (Autonomous), Madurai</p>
+                                    <span class="cgpa-pill"><i class="fas fa-star"></i> CGPA: 8.13</span>
+                                </div>
+                            </div>
+                            <div class="edu-card" data-tilt data-tilt-max="8">
+                                <div class="edu-badge">2020 – 2023</div>
+                                <div class="edu-body">
+                                    <h4>B.Sc. Chemistry</h4>
+                                    <p class="institution">St. Joseph’s College (Autonomous), Tiruchirappalli</p>
+                                    <span class="cgpa-pill"><i class="fas fa-star"></i> CGPA: 8.00</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="about-stats" data-aos="fade-left">
-                    <div class="stat-card">
-                        <h3>80%</h3>
-                        <p>Academic Excellence</p>
+
+                <!-- 3D Stats Counter Grid -->
+                <div class="about-stats-column" data-aos="fade-left">
+                    <div class="stat-3d-card" data-tilt data-tilt-glare data-tilt-max-glare="0.2">
+                        <div class="stat-icon"><i class="fas fa-medal"></i></div>
+                        <h3 class="stat-number">8.13</h3>
+                        <p class="stat-label">MCA CGPA</p>
+                        <span class="stat-desc">Academic Distinction</span>
                     </div>
-                    <div class="stat-card">
-                        <h3>1+</h3>
-                        <p>Internship Completed</p>
+
+                    <div class="stat-3d-card" data-tilt data-tilt-glare data-tilt-max-glare="0.2">
+                        <div class="stat-icon"><i class="fas fa-briefcase"></i></div>
+                        <h3 class="stat-number">2+</h3>
+                        <p class="stat-label">Internships Completed</p>
+                        <span class="stat-desc">Data Analytics &amp; Web Dev</span>
                     </div>
-                    <div class="stat-card">
-                        <h3>5+</h3>
-                        <p>Projects Delivered</p>
+
+                    <div class="stat-3d-card" data-tilt data-tilt-glare data-tilt-max-glare="0.2">
+                        <div class="stat-icon"><i class="fas fa-project-diagram"></i></div>
+                        <h3 class="stat-number">5+</h3>
+                        <p class="stat-label">Key Projects Delivered</p>
+                        <span class="stat-desc">Analytics Dashboards &amp; Portals</span>
+                    </div>
+
+                    <div class="stat-3d-card" data-tilt data-tilt-glare data-tilt-max-glare="0.2">
+                        <div class="stat-icon"><i class="fas fa-certificate"></i></div>
+                        <h3 class="stat-number">6+</h3>
+                        <p class="stat-label">Certifications &amp; Honors</p>
+                        <span class="stat-desc">Simplilearn &amp; AICTE ATAL</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="skills section glass">
+    <!-- Experience & Internships Section -->
+    <section id="experience" class="experience section glass-section">
         <div class="container">
-            <h2 class="section-title" data-aos="fade-up">Technical Expertise</h2>
-            <div class="skills-wrapper">
-                <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
-                    <h3><i class="fas fa-code"></i> Languages</h3>
-                    <div class="skill-tags">
-                        <span>JavaScript</span>
-                        <span>Java (Basic)</span>
-                        <span>Python (Basic)</span>
-                        <span>PHP</span>
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">CAREER MILESTONES</span>
+                <h2 class="section-title">Experience &amp; Internships</h2>
+                <p class="section-sub">Hands-on industry exposure in data operations, analytical problem solving, and software systems</p>
+            </div>
+
+            <div class="experience-timeline">
+                <!-- Experience 1: LONGi Solar -->
+                <div class="exp-card" data-aos="fade-up" data-tilt data-tilt-max="6">
+                    <div class="exp-header">
+                        <div class="exp-title-group">
+                            <div class="exp-icon solar-icon"><i class="fas fa-sun"></i></div>
+                            <div>
+                                <h3>O&amp;M (Operations &amp; Maintenance)</h3>
+                                <h4 class="company">LONGi Solar, Coimbatore</h4>
+                            </div>
+                        </div>
+                        <div class="exp-period">
+                            <span class="period-badge current">Jul 2026 – Present</span>
+                            <span class="location-badge"><i class="fas fa-map-pin"></i> Tamil Nadu</span>
+                        </div>
+                    </div>
+                    <div class="exp-body">
+                        <ul class="exp-bullets">
+                            <li><i class="fas fa-check-circle"></i> Continuously monitor solar plant performance metrics, generation yield, and real-time operational parameters.</li>
+                            <li><i class="fas fa-check-circle"></i> Maintain high-fidelity technical generation logs and collaborate on comprehensive operational performance reports.</li>
+                            <li><i class="fas fa-check-circle"></i> Apply data validation procedures to troubleshoot operational anomalies and ensure continuous plant efficiency.</li>
+                        </ul>
+                        <div class="exp-tags">
+                            <span>Plant Performance Tracking</span>
+                            <span>Generation Logs</span>
+                            <span>Operational Analytics</span>
+                            <span>Data Reporting</span>
+                        </div>
                     </div>
                 </div>
-                <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
-                    <h3><i class="fas fa-layer-group"></i> Frontend</h3>
-                    <div class="skill-tags">
-                        <span>React.js</span>
+
+                <!-- Experience 2: NoviTech Data Analytics -->
+                <div class="exp-card" data-aos="fade-up" data-aos-delay="150" data-tilt data-tilt-max="6">
+                    <div class="exp-header">
+                        <div class="exp-title-group">
+                            <div class="exp-icon analytics-icon"><i class="fas fa-chart-bar"></i></div>
+                            <div>
+                                <h3>Data Analytics Intern</h3>
+                                <h4 class="company">NoviTech R&amp;D Private Limited</h4>
+                            </div>
+                        </div>
+                        <div class="exp-period">
+                            <span class="period-badge">May 2026 – Jun 2026</span>
+                            <span class="location-badge"><i class="fas fa-map-pin"></i> Tamil Nadu</span>
+                        </div>
+                    </div>
+                    <div class="exp-body">
+                        <ul class="exp-bullets">
+                            <li><i class="fas fa-check-circle"></i> Completed rigorous one-month analytical internship with deep immersion in data wrangling, cleaning, and reporting.</li>
+                            <li><i class="fas fa-check-circle"></i> Applied exploratory data analysis (EDA) techniques to identify recurring patterns, anomalies, and trend trajectories.</li>
+                            <li><i class="fas fa-check-circle"></i> Built visual reporting summaries and delivered analytical insights to support strategic problem solving.</li>
+                        </ul>
+                        <div class="exp-tags">
+                            <span>Exploratory Data Analysis</span>
+                            <span>KPI Reporting</span>
+                            <span>Analytical Problem Solving</span>
+                            <span>Data Cleaning</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience 3: Wiltech Solutions -->
+                <div class="exp-card" data-aos="fade-up" data-aos-delay="300" data-tilt data-tilt-max="6">
+                    <div class="exp-header">
+                        <div class="exp-title-group">
+                            <div class="exp-icon web-icon"><i class="fas fa-laptop-code"></i></div>
+                            <div>
+                                <h3>Web Development Intern</h3>
+                                <h4 class="company">Wiltech Solutions, Madurai</h4>
+                            </div>
+                        </div>
+                        <div class="exp-period">
+                            <span class="period-badge">May 2025 – Jun 2025</span>
+                            <span class="location-badge"><i class="fas fa-map-pin"></i> Tamil Nadu</span>
+                        </div>
+                    </div>
+                    <div class="exp-body">
+                        <ul class="exp-bullets">
+                            <li><i class="fas fa-check-circle"></i> Engineered web applications, integrated MySQL databases, and implemented scalable frontend/backend components.</li>
+                            <li><i class="fas fa-check-circle"></i> Developed responsive UI components, resolved cross-browser defects, and practiced agile version control with Git.</li>
+                            <li><i class="fas fa-check-circle"></i> Maintained high coding standards, database integrity, and structured RESTful architecture.</li>
+                        </ul>
+                        <div class="exp-tags">
+                            <span>Web Application Dev</span>
+                            <span>Database Integration</span>
+                            <span>MySQL &amp; PHP</span>
+                            <span>UI Architecture</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Skills Section -->
+    <section id="skills" class="skills section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">CORE COMPETENCIES</span>
+                <h2 class="section-title">Technical Skills</h2>
+                <p class="section-sub">Tools, languages, and analytics technologies I leverage to extract actionable insights</p>
+            </div>
+
+            <div class="skills-grid">
+                <!-- Skill Category 1: Data Analytics & BI -->
+                <div class="skill-category-card" data-aos="fade-up" data-tilt data-tilt-max="8">
+                    <div class="skill-cat-header">
+                        <div class="cat-icon cat-analytics"><i class="fas fa-chart-pie"></i></div>
+                        <h3>Data Analytics &amp; BI</h3>
+                    </div>
+                    <p class="cat-desc">Business intelligence, data modeling, DAX measures &amp; automated executive dashboards.</p>
+                    <div class="skill-pills">
+                        <span class="pill-highlight"><i class="fas fa-chart-line"></i> Power BI</span>
+                        <span class="pill-highlight"><i class="fas fa-filter"></i> Power Query</span>
+                        <span class="pill-highlight"><i class="fas fa-file-excel"></i> Microsoft Excel</span>
+                        <span>Excel Dashboard</span>
+                        <span>Data Visualization</span>
+                        <span>KPI Metrics</span>
+                        <span>DAX Formulations</span>
+                    </div>
+                </div>
+
+                <!-- Skill Category 2: Databases & SQL -->
+                <div class="skill-category-card" data-aos="fade-up" data-aos-delay="100" data-tilt data-tilt-max="8">
+                    <div class="skill-cat-header">
+                        <div class="cat-icon cat-db"><i class="fas fa-database"></i></div>
+                        <h3>Databases &amp; Querying</h3>
+                    </div>
+                    <p class="cat-desc">Relational &amp; NoSQL architectures, complex SQL joins, indexing, and data pipelines.</p>
+                    <div class="skill-pills">
+                        <span class="pill-highlight"><i class="fas fa-terminal"></i> SQL</span>
+                        <span class="pill-highlight"><i class="fas fa-server"></i> MySQL</span>
+                        <span class="pill-highlight"><i class="fas fa-cubes"></i> PostgreSQL</span>
+                        <span>MongoDB</span>
+                        <span>Database Design</span>
+                        <span>Query Optimization</span>
+                        <span>Aggregations</span>
+                    </div>
+                </div>
+
+                <!-- Skill Category 3: Programming & Web -->
+                <div class="skill-category-card" data-aos="fade-up" data-aos-delay="200" data-tilt data-tilt-max="8">
+                    <div class="skill-cat-header">
+                        <div class="cat-icon cat-code"><i class="fas fa-code"></i></div>
+                        <h3>Programming &amp; Web</h3>
+                    </div>
+                    <p class="cat-desc">Data processing scripting, web integrations, API endpoints, and modern interfaces.</p>
+                    <div class="skill-pills">
+                        <span class="pill-highlight"><i class="fab fa-python"></i> Python</span>
+                        <span class="pill-highlight"><i class="fab fa-php"></i> PHP</span>
+                        <span class="pill-highlight"><i class="fab fa-js"></i> JavaScript</span>
                         <span>HTML5</span>
                         <span>CSS3</span>
-                        <span>Bootstrap</span>
-                    </div>
-                </div>
-                <div class="skill-category" data-aos="fade-up" data-aos-delay="300">
-                    <h3><i class="fas fa-server"></i> Backend & DB</h3>
-                    <div class="skill-tags">
-                        <span>Node.js</span>
+                        <span>Chart.js</span>
                         <span>REST APIs</span>
-                        <span>MySQL</span>
-                        <span>SQL</span>
-                        <span>MongoDB</span>
                     </div>
                 </div>
-                <div class="skill-category" data-aos="fade-up" data-aos-delay="400">
-                    <h3><i class="fas fa-tools"></i> Tools</h3>
-                    <div class="skill-tags">
-                        <span>Git / GitHub</span>
+
+                <!-- Skill Category 4: Tools & Platforms -->
+                <div class="skill-category-card" data-aos="fade-up" data-aos-delay="300" data-tilt data-tilt-max="8">
+                    <div class="skill-cat-header">
+                        <div class="cat-icon cat-tools"><i class="fas fa-tools"></i></div>
+                        <h3>Tools &amp; Platforms</h3>
+                    </div>
+                    <p class="cat-desc">Collaborative version control, modern development environments, and operational tools.</p>
+                    <div class="skill-pills">
+                        <span class="pill-highlight"><i class="fab fa-github"></i> GitHub</span>
+                        <span>Git Version Control</span>
                         <span>VS Code</span>
-                        <span>Power BI</span>
-                        <span>Data Analytics</span>
+                        <span>Razorpay Payment Gateway</span>
+                        <span>Solar O&amp;M Monitoring</span>
+                        <span>Agile Workflow</span>
                     </div>
                 </div>
-                <div class="skill-category" data-aos="fade-up" data-aos-delay="500">
-                    <h3><i class="fas fa-user-check"></i> Soft Skills</h3>
-                    <div class="skill-tags">
-                        <span>Problem Solving</span>
-                        <span>Communication Skills</span>
+
+                <!-- Skill Category 5: Soft Skills & Analytical Mindset -->
+                <div class="skill-category-card wide-card" data-aos="fade-up" data-aos-delay="400" data-tilt data-tilt-max="6">
+                    <div class="skill-cat-header">
+                        <div class="cat-icon cat-soft"><i class="fas fa-brain"></i></div>
+                        <h3>Analytical Mindset &amp; Soft Skills</h3>
+                    </div>
+                    <p class="cat-desc">Key personal attributes that drive successful cross-functional team delivery.</p>
+                    <div class="skill-pills">
+                        <span class="pill-gold"><i class="fas fa-lightbulb"></i> Analytical Thinking</span>
+                        <span class="pill-gold"><i class="fas fa-puzzle-piece"></i> Problem Solving</span>
+                        <span class="pill-gold"><i class="fas fa-bullhorn"></i> Data Storytelling</span>
+                        <span>Business Communication</span>
                         <span>Time Management</span>
+                        <span>Collaboration</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects section glass-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">PRACTICAL IMPLEMENTATIONS</span>
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-sub">Production-grade systems and business intelligence platforms crafted for real users</p>
+            </div>
+
+            <div class="projects-grid">
+                <!-- Project 1: Smart Government Bus Portal -->
+                <div class="project-3d-card" data-aos="fade-up" data-tilt data-tilt-max="10" data-tilt-glare data-tilt-max-glare="0.15">
+                    <div class="project-preview-wrap">
+                        <img src="img_bus_portal.svg" alt="Smart Government Bus Portal" class="project-svg-preview">
+                        <div class="project-badge">Production System</div>
+                    </div>
+                    <div class="project-card-body">
+                        <h3 class="project-name">Smart Government Bus Portal</h3>
+                        <div class="project-tech-stack">
+                            <span>PHP</span>
+                            <span>MySQL</span>
+                            <span>JavaScript</span>
+                            <span>Razorpay</span>
+                            <span>Chart.js</span>
+                        </div>
+                        <p class="project-summary">
+                            Comprehensive digital ticketing and transit platform designed to replace paper passes with a secure digital passenger wallet system, live boarding management, and an Admin Analytics Dashboard.
+                        </p>
+                        <div class="project-bullet-grid">
+                            <div class="bullet-item"><i class="fas fa-shield-alt"></i> Razorpay Payment Gateway</div>
+                            <div class="bullet-item"><i class="fas fa-chart-area"></i> Chart.js Analytics Dashboard</div>
+                            <div class="bullet-item"><i class="fas fa-wallet"></i> Digital Pass &amp; Wallet System</div>
+                            <div class="bullet-item"><i class="fas fa-bell"></i> Real-time Passenger Alerts</div>
+                        </div>
+                        <div class="project-actions">
+                            <a href="#contact" class="btn btn-card-primary"><i class="fas fa-info-circle"></i> Project Inquiries</a>
+                            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn btn-card-secondary"><i class="fab fa-github"></i> Repository</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: Digital Permission Management System -->
+                <div class="project-3d-card" data-aos="fade-up" data-aos-delay="150" data-tilt data-tilt-max="10" data-tilt-glare data-tilt-max-glare="0.15">
+                    <div class="project-preview-wrap">
+                        <img src="img_permission_system.svg" alt="Digital Permission Management System" class="project-svg-preview">
+                        <div class="project-badge award-badge">Smart Techies 2025 Awardee</div>
+                    </div>
+                    <div class="project-card-body">
+                        <h3 class="project-name">Digital Permission Management System</h3>
+                        <div class="project-tech-stack">
+                            <span>Academic Project</span>
+                            <span>PHP &amp; MySQL</span>
+                            <span>Workflow Automation</span>
+                            <span>Role-Based Access</span>
+                        </div>
+                        <p class="project-summary">
+                            Centralized academic permission workflow replacing tedious paperwork with a transparent multi-tier authorization hierarchy. Honored with a Certificate of Appreciation at Smart Techies 2025.
+                        </p>
+                        <div class="project-bullet-grid">
+                            <div class="bullet-item"><i class="fas fa-trophy"></i> Smart Techies 2025 Certificate</div>
+                            <div class="bullet-item"><i class="fas fa-sitemap"></i> Multi-tier Hierarchical Approval</div>
+                            <div class="bullet-item"><i class="fas fa-history"></i> Real-time Status &amp; Traceability</div>
+                            <div class="bullet-item"><i class="fas fa-clock"></i> 85% Turnaround Reduction</div>
+                        </div>
+                        <div class="project-actions">
+                            <a href="#certifications" class="btn btn-card-primary"><i class="fas fa-award"></i> View Award</a>
+                            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn btn-card-secondary"><i class="fab fa-github"></i> Academic Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: Enterprise Analytics & BI Suite -->
+                <div class="project-3d-card" data-aos="fade-up" data-aos-delay="300" data-tilt data-tilt-max="10" data-tilt-glare data-tilt-max-glare="0.15">
+                    <div class="project-preview-wrap">
+                        <img src="img_analytics_suite.svg" alt="Enterprise Analytics &amp; Power BI Suite" class="project-svg-preview">
+                        <div class="project-badge bi-badge">Power BI &amp; Python</div>
+                    </div>
+                    <div class="project-card-body">
+                        <h3 class="project-name">Enterprise Analytics &amp; BI Suite</h3>
+                        <div class="project-tech-stack">
+                            <span>Power BI</span>
+                            <span>Python</span>
+                            <span>SQL</span>
+                            <span>Power Query</span>
+                            <span>Excel Dashboard</span>
+                        </div>
+                        <p class="project-summary">
+                            End-to-end data pipelines and business intelligence suite built to extract, clean, and visualize operational data. Features dynamic DAX calculations, automated KPI scorecards, and interactive drill-down reports.
+                        </p>
+                        <div class="project-bullet-grid">
+                            <div class="bullet-item"><i class="fas fa-calculator"></i> Custom Dynamic DAX Measures</div>
+                            <div class="bullet-item"><i class="fas fa-database"></i> SQL ETL &amp; Data Normalization</div>
+                            <div class="bullet-item"><i class="fas fa-tachometer-alt"></i> Executive KPI Scorecards</div>
+                            <div class="bullet-item"><i class="fas fa-magic"></i> Interactive Drill-down Filters</div>
+                        </div>
+                        <div class="project-actions">
+                            <a href="#contact" class="btn btn-card-primary"><i class="fas fa-chart-line"></i> Request Demo</a>
+                            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn btn-card-secondary"><i class="fab fa-github"></i> Analytics Hub</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -172,160 +555,239 @@
     <!-- Certifications Section -->
     <section id="certifications" class="certifications section">
         <div class="container">
-            <h2 class="section-title" data-aos="fade-up">Certifications</h2>
-            <div class="cert-grid">
-                <div class="cert-card" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="cert-icon"><i class="fas fa-certificate"></i></div>
-                    <h4>Power BI</h4>
-                    <p>SimpliLearn</p>
-                </div>
-                <div class="cert-card" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="cert-icon"><i class="fas fa-certificate"></i></div>
-                    <h4>Data Analytics</h4>
-                    <p>SimpliLearn</p>
-                </div>
-                <div class="cert-card" data-aos="zoom-in" data-aos-delay="300">
-                    <div class="cert-icon"><i class="fas fa-certificate"></i></div>
-                    <h4>Python</h4>
-                    <p>SimpliLearn</p>
-                </div>
-                <div class="cert-card" data-aos="zoom-in" data-aos-delay="400">
-                    <div class="cert-icon"><i class="fas fa-certificate"></i></div>
-                    <h4>SQL</h4>
-                    <p>SimpliLearn</p>
-                </div>
-                <div class="cert-card" data-aos="zoom-in" data-aos-delay="500">
-                    <div class="cert-icon"><i class="fas fa-certificate"></i></div>
-                    <h4>MS Excel</h4>
-                    <p>SimpliLearn</p>
-                </div>
-                <div class="cert-card" data-aos="zoom-in" data-aos-delay="600">
-                    <div class="cert-icon"><i class="fas fa-certificate"></i></div>
-                    <h4>Excel Dashboard</h4>
-                    <p>SimpliLearn</p>
-                </div>
-                <div class="cert-card featured" data-aos="zoom-in" data-aos-delay="700">
-                    <div class="cert-icon"><i class="fas fa-award"></i></div>
-                    <h4>Recent Innovation in Intelligent Computing System and IoT</h4>
-                    <p>AICTE Training and Learning (ATAL)</p>
-                </div>
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">VERIFIED CREDENTIALS</span>
+                <h2 class="section-title">Certifications &amp; Honors</h2>
+                <p class="section-sub">Accredited certifications from leading institutions in data analysis, computing, and professional practice</p>
             </div>
-        </div>
-    </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects section">
-        <div class="container">
-            <h2 class="section-title" data-aos="fade-up">Featured Projects</h2>
-            <div class="projects-grid">
-                <!-- Smart Bus Portal -->
-                <div class="project-card" data-aos="flip-left">
-                    <div class="project-img">
-                        <img src="bus_portal.png" alt="Smart Government Bus Portal"
-                            style="width:100%; height:100%; object-fit:cover;">
-                        <div class="project-overlay">
-                            <a href="../bus_portal/index.php" target="_blank" class="btn btn-small">Live Demo</a>
-                            <a href="https://github.com" target="_blank" class="btn btn-small btn-secondary">Code</a>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3>Smart Government Bus Portal</h3>
-                        <p class="project-tech">PHP • MySQL • JavaScript • Razorpay</p>
-                        <p>Digital ticketing platform replacing manual passes with a secure wallet system and Admin
-                            Analytics Dashboard.</p>
-                        <ul class="project-highlights">
-                            <li>Razorpay Integration</li>
-                            <li>Glassmorphism UI</li>
-                            <li>Admin Real-time Alerts</li>
-                        </ul>
-                    </div>
+            <!-- Featured Honors Banner -->
+            <div class="featured-award-banner" data-aos="zoom-in" data-tilt data-tilt-max="6">
+                <div class="award-icon-box">
+                    <i class="fas fa-award"></i>
                 </div>
-                <!-- Internship Work -->
-                <div class="project-card" data-aos="flip-right" data-aos-delay="200">
-                    <div class="project-img">
-                        <img src="ui_components.png" alt="Web UI Components"
-                            style="width:100%; height:100%; object-fit:cover;">
-                        <div class="project-overlay">
-                            <a href="https://github.com" target="_blank" class="btn btn-small btn-secondary">Code</a>
-                            <span class="badge">Internship Project</span>
-                        </div>
+                <div class="award-content">
+                    <span class="award-tag">PRESTIGIOUS HONORS</span>
+                    <h3>Certificate of Appreciation – Smart Techies 2025</h3>
+                    <p>Awarded for innovation, creativity, and structural design in the Digital Permission Management System project.</p>
+                </div>
+                <div class="award-pill-badge">Smart Techies 2025</div>
+            </div>
+
+            <div class="cert-grid">
+                <!-- Cert 1: Data Analytics -->
+                <div class="cert-3d-card" data-aos="zoom-in" data-aos-delay="100" data-tilt data-tilt-max="12">
+                    <div class="cert-icon-wrapper"><i class="fas fa-chart-line"></i></div>
+                    <h4>Data Analytics</h4>
+                    <span class="cert-issuer">SimpliLearn</span>
+                    <p>Data exploration, statistical modeling, hypothesis testing, and analytics workflows.</p>
+                    <div class="cert-badge">Verified</div>
+                </div>
+
+                <!-- Cert 2: Power BI -->
+                <div class="cert-3d-card" data-aos="zoom-in" data-aos-delay="150" data-tilt data-tilt-max="12">
+                    <div class="cert-icon-wrapper bi-color"><i class="fas fa-chart-pie"></i></div>
+                    <h4>Power BI</h4>
+                    <span class="cert-issuer">SimpliLearn</span>
+                    <p>Data modeling, Power Query transformations, DAX formulas, and interactive report publishing.</p>
+                    <div class="cert-badge">Verified</div>
+                </div>
+
+                <!-- Cert 3: SQL -->
+                <div class="cert-3d-card" data-aos="zoom-in" data-aos-delay="200" data-tilt data-tilt-max="12">
+                    <div class="cert-icon-wrapper sql-color"><i class="fas fa-database"></i></div>
+                    <h4>SQL</h4>
+                    <span class="cert-issuer">SimpliLearn</span>
+                    <p>Relational schema design, complex joins, subqueries, aggregations, and performance tuning.</p>
+                    <div class="cert-badge">Verified</div>
+                </div>
+
+                <!-- Cert 4: Python -->
+                <div class="cert-3d-card" data-aos="zoom-in" data-aos-delay="250" data-tilt data-tilt-max="12">
+                    <div class="cert-icon-wrapper python-color"><i class="fab fa-python"></i></div>
+                    <h4>Python</h4>
+                    <span class="cert-issuer">SimpliLearn</span>
+                    <p>Data structures, automation scripts, data manipulation with analytical libraries.</p>
+                    <div class="cert-badge">Verified</div>
+                </div>
+
+                <!-- Cert 5: MS Excel -->
+                <div class="cert-3d-card" data-aos="zoom-in" data-aos-delay="300" data-tilt data-tilt-max="12">
+                    <div class="cert-icon-wrapper excel-color"><i class="fas fa-file-excel"></i></div>
+                    <h4>MS Excel</h4>
+                    <span class="cert-issuer">SimpliLearn</span>
+                    <p>Advanced formulas, VLOOKUP/XLOOKUP, INDEX-MATCH, pivot tables, and data validation.</p>
+                    <div class="cert-badge">Verified</div>
+                </div>
+
+                <!-- Cert 6: Excel Dashboard -->
+                <div class="cert-3d-card" data-aos="zoom-in" data-aos-delay="350" data-tilt data-tilt-max="12">
+                    <div class="cert-icon-wrapper dash-color"><i class="fas fa-columns"></i></div>
+                    <h4>Excel Dashboard</h4>
+                    <span class="cert-issuer">SimpliLearn</span>
+                    <p>Building automated executive visual KPI dashboards with slicers, dynamic charts, and macro automation.</p>
+                    <div class="cert-badge">Verified</div>
+                </div>
+
+                <!-- Cert 7: AICTE ATAL Academy -->
+                <div class="cert-3d-card wide-cert" data-aos="zoom-in" data-aos-delay="400" data-tilt data-tilt-max="8">
+                    <div class="cert-icon-wrapper atal-color"><i class="fas fa-microchip"></i></div>
+                    <div class="cert-wide-info">
+                        <h4>Recent Innovations in Intelligent Computing Systems and IoT (RI2CSI 2025)</h4>
+                        <span class="cert-issuer">AICTE Training and Learning (ATAL) Academy</span>
+                        <p>Specialized faculty and researcher development program focusing on intelligent computing algorithms, sensor networks, IoT analytics, and AI frameworks.</p>
                     </div>
-                    <div class="project-info">
-                        <h3>Web UI Components</h3>
-                        <p class="project-tech">React.js • Git • Agile</p>
-                        <p>Developed responsive UI components and resolved critical bugs at WilTeck, Madurai.</p>
-                        <ul class="project-highlights">
-                            <li>Performance Tuning</li>
-                            <li>Cross-browser Fixes</li>
-                            <li>Team Collaboration</li>
-                        </ul>
-                    </div>
+                    <div class="cert-badge">ATAL Academy</div>
+                </div>
+
+                <!-- Cert 8: Data Analytics Internship -->
+                <div class="cert-3d-card" data-aos="zoom-in" data-aos-delay="450" data-tilt data-tilt-max="12">
+                    <div class="cert-icon-wrapper intern-color"><i class="fas fa-certificate"></i></div>
+                    <h4>Data Analytics Internship</h4>
+                    <span class="cert-issuer">NoviTech R&amp;D Pvt. Ltd.</span>
+                    <p>Practical enterprise exposure to data preprocessing, exploratory analytics, and problem solving.</p>
+                    <div class="cert-badge">Internship</div>
+                </div>
+
+                <!-- Cert 9: Web Development Internship -->
+                <div class="cert-3d-card" data-aos="zoom-in" data-aos-delay="500" data-tilt data-tilt-max="12">
+                    <div class="cert-icon-wrapper web-color"><i class="fas fa-code-branch"></i></div>
+                    <h4>Web Development Internship</h4>
+                    <span class="cert-issuer">Wiltech Solutions, Madurai</span>
+                    <p>Web applications architecture, database integration, UI component development.</p>
+                    <div class="cert-badge">Internship</div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact section">
+    <section id="contact" class="contact section glass-section">
         <div class="container">
-            <h2 class="section-title" data-aos="fade-up">Let's Connect</h2>
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">GET IN TOUCH</span>
+                <h2 class="section-title">Let's Connect</h2>
+                <p class="section-sub">Have an opportunity, data analytics requirement, or want to collaborate? I'd love to hear from you!</p>
+            </div>
+
             <div class="contact-wrapper">
                 <div class="contact-info" data-aos="fade-right">
-                    <div class="info-item">
-                        <i class="fas fa-phone-alt"></i>
-                        <div>
+                    <div class="info-card-3d" data-tilt data-tilt-max="10">
+                        <div class="info-icon"><i class="fas fa-phone-alt"></i></div>
+                        <div class="info-content">
                             <h4>Call Me</h4>
-                            <p>+91 9791649247</p>
+                            <a href="tel:9791649247">+91 9791649247</a>
+                            <p class="info-sub">Mon – Sat, 9:00 AM – 7:00 PM IST</p>
                         </div>
                     </div>
-                    <div class="info-item">
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <h4>Email</h4>
-                            <p>john9791649247@gmail.com</p>
+
+                    <div class="info-card-3d" data-tilt data-tilt-max="10">
+                        <div class="info-icon"><i class="fas fa-envelope"></i></div>
+                        <div class="info-content">
+                            <h4>Email Directly</h4>
+                            <a href="mailto:john9791649247@gmail.com">john9791649247@gmail.com</a>
+                            <p class="info-sub">Prompt reply within 24 hours</p>
                         </div>
                     </div>
-                    <div class="info-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div>
-                            <h4>Location</h4>
-                            <p>Dindigul, TamilNadu, India</p>
+
+                    <div class="info-card-3d" data-tilt data-tilt-max="10">
+                        <div class="info-icon"><i class="fab fa-linkedin-in"></i></div>
+                        <div class="info-content">
+                            <h4>LinkedIn Profile</h4>
+                            <a href="https://linkedin.com/in/johnson-arul" target="_blank" rel="noopener noreferrer">linkedin.com/in/johnson-arul</a>
+                            <p class="info-sub">Professional networking &amp; updates</p>
+                        </div>
+                    </div>
+
+                    <div class="info-card-3d" data-tilt data-tilt-max="10">
+                        <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="info-content">
+                            <h4>Current Location</h4>
+                            <p class="info-text">Dindigul, Tamil Nadu, India</p>
+                            <p class="info-sub">Open to onsite, hybrid &amp; remote roles</p>
                         </div>
                     </div>
                 </div>
-                <form class="contact-form" data-aos="fade-left">
-                    <div class="form-group">
-                        <input type="text" placeholder="Your Name" required>
+
+                <!-- Interactive Contact Form -->
+                <div class="contact-form-card" data-aos="fade-left" data-tilt data-tilt-max="6">
+                    <div class="form-header">
+                        <h3>Send a Direct Message</h3>
+                        <p>Fill out the form below and I will get back to you shortly.</p>
                     </div>
-                    <div class="form-group">
-                        <input type="email" placeholder="Your Email" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea placeholder="Your Message" rows="5" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Send Message</button>
-                </form>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <div class="input-with-icon">
+                                <i class="fas fa-user"></i>
+                                <input type="text" id="name" placeholder="e.g. Alex Henderson" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Your Email Address</label>
+                            <div class="input-with-icon">
+                                <i class="fas fa-envelope"></i>
+                                <input type="email" id="email" placeholder="e.g. alex@company.com" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Subject / Project Type</label>
+                            <div class="input-with-icon">
+                                <i class="fas fa-briefcase"></i>
+                                <input type="text" id="subject" placeholder="e.g. Data Analyst Role / Dashboard Project" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <div class="input-with-icon textarea-icon">
+                                <i class="fas fa-comment-alt"></i>
+                                <textarea id="message" rows="4" placeholder="Share your project requirements, job description, or collaboration ideas..." required></textarea>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-submit">
+                            <span>Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                    <div id="formFeedback" class="form-feedback"></div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <div class="container">
-            <div class="footer-content">
-                <p>&copy; 2024 Johnson Arul K. Created with <i class="fas fa-heart"></i> & Code.</p>
-                <div class="footer-links">
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                    <a href="#"><i class="fab fa-github"></i></a>
-                </div>
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <a href="#home" class="logo">
+                    <span class="logo-name">JOHNSON</span><span class="logo-dot">.ARUL</span>
+                </a>
+                <p>MCA Graduate &amp; Data Analyst dedicated to transforming data into actionable insights.</p>
+            </div>
+            <div class="footer-socials">
+                <a href="https://linkedin.com/in/johnson-arul" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="mailto:john9791649247@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+                <a href="tel:9791649247" title="Phone"><i class="fas fa-phone-alt"></i></a>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Johnson Arul K. Designed with <i class="fas fa-heart text-cyan"></i> for Data Analytics &amp; Professional Impact.</p>
             </div>
         </div>
     </footer>
 
+    <!-- Three.js (For 3D background particle node field) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <!-- Vanilla Tilt (For realistic 3D card perspective tilt & glare) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
+    <!-- Typed.js -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <!-- AOS JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <!-- Typed JS -->
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <!-- Custom JS -->
     <script src="script.js"></script>
 </body>
